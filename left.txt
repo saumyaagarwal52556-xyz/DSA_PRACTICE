@@ -1,0 +1,5 @@
+
+Next Premutation
+count inversion
+triplet summ in array
+Meadian of 2 array
