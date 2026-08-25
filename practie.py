@@ -28,3 +28,41 @@ def minJumps(arr):
                 currReach = maxReach
 
     return -1
+
+def getMinDiff(arr , k):
+
+    new = []
+
+    for i in range(len(arr)):
+        if i < k -1:
+            new.append(arr[i] + k)
+
+        else:
+            if arr[i] - k <0:
+                continue
+            else:
+                new.append(arr[i] -k)
+
+    print(new)
+
+    dif = max(new) - min(new)
+    print(dif)
+
+    ans = arr[-1] - arr[0]
+
+    for i in range(len(arr) -1):
+
+        new_max = max(arr[i] + k , arr[-1] - k)
+        new_min = min(arr[0] + k , arr[i+1] - k)
+
+        if new_min <0:
+            continue
+
+
+        ans = min( ans, new_max - new_min)
+
+    print(ans)
+
+arr=[1,5,8,10]
+k = 2
+getMinDiff(arr,k)
