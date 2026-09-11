@@ -1,0 +1,23 @@
+# def isPalindrome(s):
+#     left = 0
+#     right = len(s)-1
+
+#     while left <=right:
+
+#         if s[left] != s[right]:
+#             return False
+
+#         left +=1
+#         right -=1
+#     return True
+    
+# s="abba"
+# print(isPalindrome(s))
+
+def dup(arr):
+    new = set(arr)
+    if len(new) <len(arr):
+        return True
+    else:
+        return False
+
