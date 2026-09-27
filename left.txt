@@ -1,3 +1,0 @@
-array
-
-(15) triplet sum in array
